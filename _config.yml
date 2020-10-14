@@ -29,7 +29,7 @@ github_username:  v1k1ngfr
 repository: v1k1ngfr/v1k1ngfr.github.io
 
 # Build settings
-remote_theme: benbalter/jekyll-theme-hacker
+theme: jekyll-theme-hacker
 #theme: minima
 plugins:
   - jekyll-feed
