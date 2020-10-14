@@ -29,8 +29,8 @@ github_username:  v1k1ngfr
 repository: v1k1ngfr/v1k1ngfr.github.io
 
 # Build settings
-theme: jekyll-theme-hacker
-#theme: minima
+#theme: jekyll-theme-hacker
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-coffeescript
@@ -63,5 +63,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-theme: jekyll-theme-hacker
