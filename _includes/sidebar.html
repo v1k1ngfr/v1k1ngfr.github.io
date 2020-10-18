@@ -1,0 +1,33 @@
+<div class="sidebar-about">
+    <h1>
+        <img id="site-logo" src="/assets/icones/logo.png" alt="viking logo" title="logo" />
+        <a class="sidebar-title" href="/">
+        {{ site.title }}
+        </a>
+    </h1>
+    <p class="lead">{{ site.tagline }}</p>
+</div>
+
+<ul>
+    <li class="{% if page.url == '/' %}active{% endif %}">
+        <a href="/">Home</a>
+    </li>
+    {% assign pages_list = site.pages %}
+    {% for node in pages_list %}
+        {% if node.title != null %}
+            {% if node.layout == "page" or node.layout == "archive" %}
+                <li class="{% if page.url == node.url %}active{% endif %}">
+                    <a href="{{ node.url }}">{{ node.title }}</a>
+                </li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</ul>
+<div class="sidebar-social">
+<ul>
+  <li><a href="https://twitter.com/vikingfr" title="Twitter" target="_blank"><img alt="Twitter" title="Twitter" src="/assets/icones/social/twitter.png" /></a></li>
+  <li><a href="https://github.com/v1k1ngfr" title="Github" target="_blank"><img title="Github" alt="Github" src="/assets/icones/social/github.png" /></a></li>
+  <li><a href="/feed.xml" title="RSS" target="_blank"><img title="RSS" alt="RSS" src="/assets/icones/social/rss.png" /></a></li>
+</ul>
+</div>
+<p class="sidebar-copyright">&copy; {{ site.time | date: '%Y' }}.</p>

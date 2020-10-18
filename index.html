@@ -1,0 +1,57 @@
+---
+layout: default
+title: Home
+description: Hacking include sharing. This place dump stuffs I found interesting, maybe it can be helpful for others.
+---
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+  {% if post.cover %}
+    <p class="post-cover">
+      <img src="/{{ post.cover }}" alt="{{ post.title }}" title="{{ post.title }}" />
+    </p>
+  {% endif %}
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <div class="post-info">
+      <p class="alignleft">{{ post.date | date_to_string }} · {% assign words = post.content | number_of_words %}{{ words | divided_by:180 | plus:1 }} min</p>
+      <p class="alignright">Author : <strong><a href="https://twitter.com/vikingfr">{{ post.author }}</a></strong></p>
+    </div>
+
+    {{ post.excerpt }}
+
+    {% capture content_words %} 
+      {{ post.content | number_of_words }} 
+    {% endcapture %} 
+    {% capture excerpt_words %} 
+      {{ post.excerpt | number_of_words }} 
+    {% endcapture %} 
+    {% if excerpt_words != content_words %}
+    <br />
+    <a href="{{ post.url }}">Read more →</a>
+    {% endif %}
+    <hr />
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ paginator.previous_page_path }}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>

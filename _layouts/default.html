@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-us" class="no-js">
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+    <main class="cd-main-content">
+		<nav class="cd-side-nav">
+            {% include sidebar.html %}
+        </nav>
+
+        <div class="content-wrapper">
+          {% if page.url == "/" %}
+	  <p class="lang"><a href="https://v1k1ngfr.github.io{{ page.url }}"> <!-- <img src="/assets/icones/fr.png" alt="french flag" /> --> </a></p>
+          {% else %}
+            {% for post in site.posts %}
+              {% if post.permalink == page.url %}
+                {% for lang in post.translation %}
+                  {% if lang == "fr" %}
+		  <p class="lang"><a href="https://v1k1ngfr.github.io{{ page.url }}"><!-- <img src="/assets/icones/fr.png" alt="french flag" /> --> </a></p>
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {{ content }}
+        </div>
+    </main>
+    <script src="/assets/js/jquery-2.1.4.js"></script>
+    <script src="/assets/js/jquery.menu-aim.js"></script>
+    <script src="/assets/js/anchor.min.js"></script>
+    <script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
+  </body>
+</html>
