@@ -103,7 +103,7 @@ a.pagination-item:hover{background-color:#f5f5f5}
 .cd-logo{float:left;display:flex;margin:8px 0 0 7%}
 .cd-logo:hover{text-decoration:none}
 .cd-logo img{display:inline-block;vertical-align:middle;width:39px;height:39px}
-.cd-logo .cd-logo-title{font-family:Signika,serif;height:44px;color:#fff;padding:7px 0 2px 8px}
+.cd-logo .cd-logo-title{font-family:Signika,serif;height:44px;color:#014590;padding:7px 0 2px 8px}
 @media only screen and (min-width:900px){.cd-logo{margin:16px 0 0 36px}
 }
 .cd-nav-trigger{float:right;position:relative;display:block;width:34px;height:44px;margin-top:5px;margin-right:5%;overflow:hidden;white-space:nowrap;color:transparent}
