@@ -13,4 +13,4 @@ From my point of view Hacking includes sharing. This place dumps stuffs I found 
 I discovered Hacking during the late 90s and I'm still amazed by all those fun topics were somebody interacting in an unexpected way with something can get fun results :-)
 
 # Contact
-Remarks ? Suggestions ? Improvements ? Feel free to contact me !  (vikingfr @ gmail)
+Remarks ? Suggestions ? Improvements ? Feel free to contact me : vikingfr on Twitter or Gmail.
