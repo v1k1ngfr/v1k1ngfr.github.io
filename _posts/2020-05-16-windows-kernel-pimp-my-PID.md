@@ -64,7 +64,7 @@ Oh wait ! We have a nice overview of how the information goes from the user to t
 
 ### IRP structure
 
-We are talking about IRP, but what is this ? It stands for **Input/Output Request Packet** : the data privided by the user is wrapped into it. The [`IRP` structure][WIN-IRP-STRUCT] is a standard NT structure defined in WDM.H. It is composed with many fields and sub-structures, but in this article we will focus on the following elements :
+We are talking about IRP, but what is this ? It stands for **Input/Output Request Packet** : the data provided by the user is wrapped into it. The [`IRP` structure][WIN-IRP-STRUCT] is a standard NT structure defined in WDM.H. It is composed with many fields and sub-structures, but in this article we will focus on the following elements :
 - the **UserBuffer** field : actually this is where the data returned from the driver will be transmitted to the  client (Note : in our example we will use the [TransfertType][WIN-TRANSFERTTYPE] named `METHOD_NEITHER`, so the output buffer's address is stored here)
 - the **CurrentStackLocation** field : actually this is where the data sent from the client will be reached by the driver. 
 
