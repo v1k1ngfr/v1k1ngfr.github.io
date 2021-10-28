@@ -1,5 +1,5 @@
 ---
-title: 'Loading unsigned Windows drivers without reboot2'
+title: 'Loading unsigned Windows drivers without reboot'
 date: 2021-10-27
 author: "Viking"
 layout: post
