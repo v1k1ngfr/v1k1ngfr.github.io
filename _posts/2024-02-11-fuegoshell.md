@@ -42,6 +42,8 @@ One of the tricks I learnt is that Powershell allows to create communication cha
 - use of named pipes for sending commands / receiving results
 - keep it simple using Powershell oneliners for all this stuff  
 
+The project is available here : [https://github.com/v1k1ngfr/fuegoshell][LINK4]  
+
 ## Creating a "fuegoshell" bind shell
 
 How does it works ?  
