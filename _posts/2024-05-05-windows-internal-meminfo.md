@@ -286,11 +286,40 @@ And that's it !
 
 [![PfiQueryFileInfo_patch](/assets/uploads/2024/05/PfiQueryFileInfo_patch.png)](/assets/uploads/2024/05/PfiQueryFileInfo_patch.png)  
 
-Eventually here is the result, you can *Dump full information about each page in the PFN database* and *Display file names associated to memory mapped pages* : 
+Eventually here is the result : 
 
 [![meminfo_patched](/assets/uploads/2024/05/meminfo_tests_midi12_viking.png)](/assets/uploads/2024/05/meminfo_tests_midi12_viking.png)  
 
-And here it is I hope you learnt something. Thanks for reading, feedbacks are welcome !   
+Better, but we're not done yet : after some seconds, another crash occurs. In the example below the *Meminfo.exe -a* command crashes after displaying details about physical address 9E000.  
+
+[![fix3_1-crash.png](/assets/uploads/2024/05/fix3_1-crash.png)](/assets/uploads/2024/05/fix3_1-crash.png)  
+
+## Fix 3 : PfiDumpPfnEntry buffer overflow   
+
+When running debug mode, Meminfo.exe trigger an exception "Buffer too small".   
+
+[![fix3_2-debug.png](/assets/uploads/2024/05/fix3_2-debug.png)](/assets/uploads/2024/05/fix3_2-debug.png)  
+
+The call stack refers to *PfiDumpPfnEntry - Line 639* :   
+
+[![fix3_3-rootCause.png](/assets/uploads/2024/05/fix3_3-rootCause.png)](/assets/uploads/2024/05/fix3_3-rootCause.png)  
+
+The *"Extra"* variable is too small, you can just adjust the size with the following value :   
+
+```cpp
+	// fix this
+	// CHAR Extra[11]; 
+	// 16 bytes value + 3 char (2 char before "0x" and 1 null at end). 
+	// Example when type is Page Table, Extra can have value : 0x0000B587CE4020C0
+	CHAR Extra[16+3]; 
+```
+
+Eventually here is the result, *Meminfo* doesn't crash at physical address 9E000 anymore.   
+
+[![fix3_4-success.png](/assets/uploads/2024/05/fix3_4-success.png)](/assets/uploads/2024/05/fix3_4-success.png)  
+
+You can now use *Meminfo.exe -a* for dumping full information about each page in the PFN database, displaying file names associated to memory mapped pages.   
+Here it is I hope you learnt something. Thanks for reading, feedbacks are welcome !   
 
 Resources :    
 [https://www.microsoftpressstore.com/store/windows-internals-part-1-system-architecture-processes-9780735684188][LINK1]  
