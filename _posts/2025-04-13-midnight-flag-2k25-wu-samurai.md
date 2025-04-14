@@ -82,6 +82,7 @@ A CTF is an opportunity to learn new techniques, and here are the lessons I drew
 
 2. The `.writemem` command of Windbg writes a section of memory to a file. It is useful when you want to extract a payload / stage 2 / shellcode of RAM.  
 
+[![Challenge file : oscur.exe](/assets/uploads/2025/04/oscur.exe)](/assets/uploads/2025/04/oscur.exe)  
 
 Thanks for reading, I hope you learnt something and your feedbacks are welcome !   
 
