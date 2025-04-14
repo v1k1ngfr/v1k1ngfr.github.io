@@ -1,6 +1,6 @@
 ---
 title: 'Midnight Flag CTF 2k25'
-date: 2024-08-25
+date: 2025-04-13
 author: "Viking"
 layout: post
 permalink: /midnight-flag-2k25-wu-samurai/
