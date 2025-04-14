@@ -76,11 +76,11 @@ Ok let's create the registry key and test : the flag is displayed directly MCTF{
 
 A CTF is an opportunity to learn new techniques, and here are the lessons I drew from it :  
 
-1. the [Procmon tool][LINK2] should not be forgotten during reverse operations. The author of the chall probably solve it with Procmon (the flag says ProcMonFTW). Of course we can see the registry key that should be read (HKCU\I Really Want to Stay at Your House) but this idea did not come to my mind   
+- the [Procmon tool][LINK2] should not be forgotten during reverse operations. The author of the chall probably solve it with Procmon (the flag says ProcMonFTW). Of course we can see the registry key that should be read (HKCU\I Really Want to Stay at Your House) but this idea did not come to my mind   
 
 [![10-procmon.png](/assets/uploads/2025/04/10-procmon.png)](/assets/uploads/2025/04/10-procmon.png)  
 
-2. The `.writemem` command of Windbg writes a section of memory to a file. It is useful when you want to extract a payload / stage 2 / shellcode of RAM.  
+- The `.writemem` command of Windbg writes a section of memory to a file. It is useful when you want to extract a payload / stage 2 / shellcode of RAM.  
 
 [![Challenge file : oscur.exe](/assets/uploads/2025/04/oscur.exe)](/assets/uploads/2025/04/oscur.exe)  
 
