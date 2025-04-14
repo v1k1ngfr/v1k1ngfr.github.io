@@ -29,8 +29,6 @@ The [Midnight Flag CTF][LINK1] is the annual cybersecurity competition organized
 
 Here is the challenge :  
 
-[![PfiInitializePfnDatabase.drawio](/assets/uploads/2024/08/PfiInitializePfnDatabase.drawio.png)](/assets/uploads/2024/08/PfiInitializePfnDatabase.drawio.png)  
-
 [![1-chall.png](/assets/uploads/2025/04/1-chall.png)](/assets/uploads/2025/04/1-chall.png)     
 
 The main() of oscur.exe is very simple :  
