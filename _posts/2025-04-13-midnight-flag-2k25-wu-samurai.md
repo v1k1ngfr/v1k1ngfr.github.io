@@ -1,5 +1,5 @@
 ---
-title: 'Midnight Flag CTF 2k25'
+title: 'Midnight Flag CTF 2k25 - Samurai write-up'
 date: 2025-04-13
 author: "Viking"
 layout: post
